@@ -14,9 +14,12 @@ int main(int argc, char *argv[]) {
 }
 
 int sum(int n) {
-	int result = 0;
-	for (int i = 0; i <= n; i++) {
-		result += i;
-  }
-	return result;
+	
+	// base case
+	if (n == 0) {
+		return 0;
+	}
+
+	// recursive step
+	return sum(n - 1) + n;
 }
